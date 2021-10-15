@@ -9,7 +9,7 @@ export const WarriorView = ({id = 'goku'}) => {
     return (
         <div className="warrior-view">
             <div className="warrior">
-                <img src={window.location.origin + `/${warrior.img}`}></img>
+                <img src={window.location.origin + `/${warrior.img}`} alt="Warrior"></img>
             </div>
 
             <div className="info">

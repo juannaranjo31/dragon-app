@@ -1,21 +1,17 @@
-import { useState } from "react"
+import { useState } from "react";
 
-export const useForm = (initialState = { name: '', email: '', password: ''}) => {
+export const useForm = (initialState = 'goku') => {
 
-    const [values, setValues] = useState(initialState);
+    const [value, setValue] = useState(initialState);
 
     const handleInputChange = ({target}) => {
         
-        setValues({
-            ...values,
-            [target.name]: target.value
-        });
+        setValue(target.value);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(values);
     };
 
-    return [values, handleInputChange, handleSubmit];
+    return [value, handleInputChange, handleSubmit];
 }

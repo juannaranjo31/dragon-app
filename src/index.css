@@ -114,8 +114,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .next{
@@ -216,3 +216,43 @@ body {
     cursor: pointer;
 }
 
+
+.warriors-grid{
+    height: 93%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+}
+
+.radar .screen .card{
+    background-color: #ff6600;
+    padding: 2rem;
+    height: 16rem;
+    width: 14rem;
+    border-radius: 10%;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.3em;
+    color: #ffffff;
+}
+
+.radar .screen .card .warrior-image{
+    width: 100%;
+    height: 90%;
+}
+
+.radar .screen .card .warrior-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.radar .screen .card .warrior-name{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
