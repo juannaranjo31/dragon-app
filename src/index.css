@@ -13,6 +13,27 @@ body {
     background-size: cover;
 }
 
+.d-none{
+    display: none;
+}
+
+.message-error{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    color: #19d300;
+    font-size: 1.9em;
+}
+
+.message-error .grid{
+    background-color: #007527;
+    padding: 0.3rem;
+    border: solid 0.1rem #19d300;
+}
+
 .content{
     height: 90vh;
     display: grid;
