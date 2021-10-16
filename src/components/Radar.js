@@ -12,7 +12,7 @@ export const Radar = () => {
     const [characters, setCharacters] = useState(searchByBreed('Any'));
     const [name, handleInputChange] = useForm('');
     const [warrior, setWarrior] = useState(name);
-    const {counter, increment, reset} = useCounter(1, 1);
+    const {counter, increment, decrement, reset} = useCounter(1, 1);
 
 
     return (
@@ -47,7 +47,9 @@ export const Radar = () => {
                 <button className="prev"
                     onClick={
                         () => {
+
                             if (initial >= 4) {
+                                decrement();
                                 setInitial(initial - 4);
                                 setFinal(final - 4);
                             }
@@ -61,12 +63,13 @@ export const Radar = () => {
                     onClick={
                         () => {
                             increment();
-                            console.log(counter);
-                            
                                 if (counter < characters.length / 4) {
                                     setInitial(initial + 4);
                                     setFinal(final + 4);
+                                }else{
+                                    reset(characters.length / 4);
                                 }
+
                         }
                     }
                 ></button>

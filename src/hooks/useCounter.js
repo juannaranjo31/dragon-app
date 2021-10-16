@@ -11,8 +11,8 @@ export const useCounter = (initialState = 10, factor = 4) => {
         setCounter(counter - factor);
     };
 
-    const reset = () => {
-        setCounter(initialState);
+    const reset = (value = initialState) => {
+        setCounter(value);
     };
 
     return {counter, increment, decrement, reset};
