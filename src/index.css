@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import 'animate.css';
 
 *{
     padding: 0;
@@ -11,6 +12,7 @@
 body {
     background-image: url('../src/assets/background.png');
     background-size: cover;
+    overflow-y: hidden;
 }
 
 .d-none{
@@ -32,6 +34,8 @@ body {
     background-color: #007527;
     padding: 0.3rem;
     border: solid 0.1rem #19d300;
+    animation: flash;
+    animation-duration: 2s;
 }
 
 .content{
@@ -93,8 +97,6 @@ body {
     overflow-y: auto;
 }
 
-
-
 .warrior-view .warrior img{
     height: 100%;
 }
@@ -115,6 +117,9 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.322);
+    animation: fadeIn;
+    animation-duration: 2s;
     
 }
 
@@ -196,6 +201,8 @@ body {
     font-size: 1.3em;
     color: #19d300;
     height: 2rem;
+    animation: fadeInDown;
+    animation-duration: 1s;
 }
 
 .radar .screen .bar select option{
@@ -215,6 +222,8 @@ body {
     border: solid 0.1rem #19d300;
     font-size: 1.3em;
     color: #19d300;
+    animation: fadeInDown;
+    animation-duration: 1s;
 }
 
 .radar .screen .bar form input::placeholder{
@@ -229,6 +238,8 @@ body {
     border-radius: 10%;
     font-size: 1.2em;
     color: #19d300;
+    animation: fadeInDown;
+    animation-duration: 1s;
 }
 
 .radar .screen .bar form button:hover{
@@ -260,6 +271,17 @@ body {
     font-family: 'Bebas Neue', cursive;
     font-size: 2.3em;
     color: #ffffff;
+    transform: scale(1);
+    transition: all 1s;
+    animation: fadeInUp;
+    animation-duration: 1s;
+}
+
+.radar .screen .card:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 1s;
+    border: solid 0.1rem #19d300;
 }
 
 .radar .screen .card .warrior-image{
