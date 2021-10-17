@@ -2,7 +2,7 @@ import React from 'react';
 import { WarriorCard } from './WarriorCard';
 import { searchByName } from '../helpers/searchByName';
 
-export const WarriorsGrid = ( {name='', grid=[]}) => {
+export const WarriorsGrid = ( {name='', grid=[], idView, handleClick}) => {
 
     if (name !== '') {
         grid = [searchByName(name)];
@@ -19,7 +19,7 @@ export const WarriorsGrid = ( {name='', grid=[]}) => {
     }
     
     return (
-        <div className="warriors-grid">
+        <div className="warriors-grid" onClick={handleClick}>
             {
                 grid.map( (character) => {
                     return (

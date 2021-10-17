@@ -6,13 +6,14 @@ import { useForm } from '../hooks/useForm';
 import { searchByBreed } from '../helpers/searchByBreed';
 import { useCounter } from '../hooks/useCounter';
 
-export const Radar = () => {
+export const Radar = (handleClick) => {
     const [initial, setInitial] = useState(0);
     const [final, setFinal] = useState(4);
     const [characters, setCharacters] = useState(searchByBreed('Any'));
     const [name, handleInputChange] = useForm('');
     const [warrior, setWarrior] = useState(name);
     const {counter, increment, decrement, reset} = useCounter(1, 1);
+
 
 
     return (
