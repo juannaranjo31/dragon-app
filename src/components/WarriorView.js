@@ -1,10 +1,13 @@
 import React from 'react';
 import data from '../json/warriors.json';
 
+
 export const WarriorView = ({id = 'goku'}) => {
 
     const {characters} = data;
     const warrior = characters.find( warrior => warrior.id === id);
+
+    
 
     return (
         <div className="warrior-view">
